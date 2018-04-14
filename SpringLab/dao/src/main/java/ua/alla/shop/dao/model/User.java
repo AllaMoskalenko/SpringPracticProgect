@@ -1,7 +1,7 @@
 package ua.alla.shop.dao.model;
 
 public class User {
-    private long id;
+    private Long id;
     private String firstName;
     private String lastName;
     private int age;
@@ -9,7 +9,7 @@ public class User {
     public User() {
     }
 
-    public User(long id, String firstName, String lastName, int age) {
+    public User(Long id, String firstName, String lastName, int age) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
