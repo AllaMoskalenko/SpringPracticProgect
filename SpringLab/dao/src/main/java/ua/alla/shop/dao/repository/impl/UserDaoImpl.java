@@ -4,7 +4,9 @@ import org.springframework.stereotype.Repository;
 import ua.alla.shop.dao.model.User;
 import ua.alla.shop.dao.repository.UserDao;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Repository
@@ -23,4 +25,7 @@ public class UserDaoImpl implements UserDao {
         return users;
     }
 
+    public List<User> findAll(){
+        return new ArrayList<>(users.values());
+    }
 }

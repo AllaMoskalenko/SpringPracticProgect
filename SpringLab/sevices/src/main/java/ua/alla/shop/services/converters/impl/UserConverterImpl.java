@@ -16,6 +16,9 @@ public class UserConverterImpl implements UserConverter {
     }
 
     public UserDto toDto(User entity) {
-        return null;
+        return new UserDto(
+                entity.getFirstName(),
+                entity.getLastName(),
+                entity.getAge());
     }
 }
