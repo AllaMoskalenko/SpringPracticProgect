@@ -18,4 +18,9 @@ public class UserDaoImpl implements UserDao {
         user.setId(idGenerator++);
         users.put(user.getId(), user);
     }
+
+    public Map<Long, User> getUsers() {
+        return users;
+    }
+
 }
