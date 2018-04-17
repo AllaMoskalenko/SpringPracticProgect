@@ -1,8 +1,6 @@
-package ua.alla.shop.dao.model;
+package ua.alla.shop.services.dto;
 
-public class Product {
-
-    private Long id;
+public class ProductDto {
     private String name;
     private int price;
     private int gender;
@@ -10,26 +8,16 @@ public class Product {
     private int size;
     private int remainder;
 
-
-    public Product() {
+    public ProductDto() {
     }
 
-    public Product(Long id, String name, int price, int gender, String color, int size, int remainder) {
-        this.id = id;
+    public ProductDto(String name, int price, int gender, String color, int size, int remainder) {
         this.name = name;
         this.price = price;
         this.gender = gender;
         this.color = color;
         this.size = size;
         this.remainder = remainder;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
     }
 
     public String getName() {
