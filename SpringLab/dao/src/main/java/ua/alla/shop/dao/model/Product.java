@@ -5,16 +5,27 @@ public class Product {
     private Long id;
     private String name;
     private int price;
-    private int gender;
-    private String color;
-    private int size;
+    private Gender gender;
+    private Color color;
+    private Size size;
     private int remainder;
 
+    public enum Gender{
+        male, female, unisex, boys, girls
+    }
+
+    public enum Size {
+        XS, S, M, L, XL, XXL
+    }
+
+    public enum Color{
+        white, yellow, red, orange, purple, green, blue, brown, grey, black
+    }
 
     public Product() {
     }
 
-    public Product(Long id, String name, int price, int gender, String color, int size, int remainder) {
+    public Product(Long id, String name, int price, Gender gender, Color color, Size size, int remainder) {
         this.id = id;
         this.name = name;
         this.price = price;
@@ -48,27 +59,27 @@ public class Product {
         this.price = price;
     }
 
-    public int getGender() {
+    public Gender getGender() {
         return gender;
     }
 
-    public void setGender(int gender) {
+    public void setGender(Gender gender) {
         this.gender = gender;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
-    public int getSize() {
+    public Size getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(Size size) {
         this.size = size;
     }
 

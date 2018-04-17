@@ -1,17 +1,24 @@
 package ua.alla.shop.services.dto;
 
+import ua.alla.shop.dao.model.Product;
+
 public class ProductDto {
     private String name;
     private int price;
-    private int gender;
-    private String color;
-    private int size;
+    private Product.Gender gender;
+    private Product.Color color;
+    private Product.Size size;
     private int remainder;
 
     public ProductDto() {
     }
 
-    public ProductDto(String name, int price, int gender, String color, int size, int remainder) {
+    public ProductDto(String name, int price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public ProductDto(String name, int price, Product.Gender gender, Product.Color color, Product.Size size, int remainder) {
         this.name = name;
         this.price = price;
         this.gender = gender;
@@ -36,27 +43,27 @@ public class ProductDto {
         this.price = price;
     }
 
-    public int getGender() {
+    public Product.Gender getGender() {
         return gender;
     }
 
-    public void setGender(int gender) {
+    public void setGender(Product.Gender gender) {
         this.gender = gender;
     }
 
-    public String getColor() {
+    public Product.Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Product.Color color) {
         this.color = color;
     }
 
-    public int getSize() {
+    public Product.Size getSize() {
         return size;
     }
 
-    public void setSize(int size) {
+    public void setSize(Product.Size size) {
         this.size = size;
     }
 

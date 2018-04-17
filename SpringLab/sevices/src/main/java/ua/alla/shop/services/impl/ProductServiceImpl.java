@@ -1,5 +1,7 @@
 package ua.alla.shop.services.impl;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import ua.alla.shop.dao.model.Product;
 import ua.alla.shop.dao.repository.ProductDao;
 import ua.alla.shop.services.ProductService;
@@ -9,11 +11,13 @@ import ua.alla.shop.services.dto.ProductDto;
 import java.util.ArrayList;
 import java.util.List;
 
+@Service
 public class ProductServiceImpl implements ProductService {
 
     private final ProductDao productDao;
     private final ProductConverter productConverter;
 
+    @Autowired
     public ProductServiceImpl(ProductDao productDao, ProductConverter productConverter) {
         this.productDao = productDao;
         this.productConverter = productConverter;
