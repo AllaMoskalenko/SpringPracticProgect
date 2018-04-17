@@ -1,5 +1,6 @@
 package ua.alla.shop.dao.repository.impl;
 
+import org.springframework.stereotype.Repository;
 import ua.alla.shop.dao.model.Product;
 import ua.alla.shop.dao.repository.ProductDao;
 
@@ -8,6 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Repository
 public class ProductDaoImpl implements ProductDao {
 
     private final Map<Long, Product> products = new HashMap<>();
