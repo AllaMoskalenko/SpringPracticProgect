@@ -11,7 +11,7 @@ public class Product {
     private int remainder;
 
     public enum Gender{
-        male, female, unisex, boys, girls
+        MALE, FEMALE, UNISEX, BOYS, GIRLS
     }
 
     public enum Size {
@@ -19,7 +19,7 @@ public class Product {
     }
 
     public enum Color{
-        white, yellow, red, orange, purple, green, blue, brown, grey, black
+        WHITE, YELLOW, ORANGE, RED, PURPLE, BLUE, GREEN, BROWN, GREY, BLACK
     }
 
     public Product() {
@@ -89,5 +89,13 @@ public class Product {
 
     public void setRemainder(int remainder) {
         this.remainder = remainder;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
