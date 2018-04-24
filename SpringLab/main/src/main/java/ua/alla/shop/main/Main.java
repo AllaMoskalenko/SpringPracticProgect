@@ -21,7 +21,12 @@ public class Main {
 
         ProductService productService = context.getBean(ProductService.class);
 
-        ProductDto dto = new ProductDto(args[0], Integer.parseInt(args[1]));
+        ProductDto dto = new ProductDto(args[0],
+                Integer.parseInt(args[1]),
+                args[2],
+                args[3],
+                args[4],
+                Integer.parseInt(args[5]));
 
         productService.create(dto);
 

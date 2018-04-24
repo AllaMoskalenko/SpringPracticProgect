@@ -5,20 +5,15 @@ import ua.alla.shop.dao.model.Product;
 public class ProductDto {
     private String name;
     private int price;
-    private Product.Gender gender;
-    private Product.Color color;
-    private Product.Size size;
+    private String gender;
+    private String color;
+    private String size;
     private int remainder;
 
     public ProductDto() {
     }
 
-    public ProductDto(String name, int price) {
-        this.name = name;
-        this.price = price;
-    }
-
-    public ProductDto(String name, int price, Product.Gender gender, Product.Color color, Product.Size size, int remainder) {
+    public ProductDto(String name, int price, String gender, String color, String size, int remainder) {
         this.name = name;
         this.price = price;
         this.gender = gender;
@@ -43,27 +38,27 @@ public class ProductDto {
         this.price = price;
     }
 
-    public Product.Gender getGender() {
+    public String getGender() {
         return gender;
     }
 
-    public void setGender(Product.Gender gender) {
+    public void setGender(String gender) {
         this.gender = gender;
     }
 
-    public Product.Color getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Product.Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
-    public Product.Size getSize() {
+    public String getSize() {
         return size;
     }
 
-    public void setSize(Product.Size size) {
+    public void setSize(String size) {
         this.size = size;
     }
 
@@ -73,5 +68,17 @@ public class ProductDto {
 
     public void setRemainder(int remainder) {
         this.remainder = remainder;
+    }
+
+    @Override
+    public String toString() {
+        return "Product {" +
+                "name='" + name + '\'' +
+                ", price=" + price +
+                ", gender='" + gender + '\'' +
+                ", color='" + color + '\'' +
+                ", size='" + size + '\'' +
+                ", remainder=" + remainder +
+                '}'+ '\n';
     }
 }

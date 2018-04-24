@@ -9,16 +9,22 @@ import ua.alla.shop.services.dto.ProductDto;
 public class ProductConverterImpl implements ProductConverter {
 
     public Product toEntity(ProductDto dto) {
+
+        Product.Gender gender1 = Product.Gender.valueOf(dto.getGender());
+        Product.Color color1 = Product.Color.valueOf(dto.getColor());
+        Product.Size size1 = Product.Size.valueOf(dto.getSize());
+
         return new Product(null,
                 dto.getName(),
                 dto.getPrice(),
-                dto.getGender(),
-                dto.getColor(),
-                dto.getSize(),
+                gender1,
+                color1,
+                size1,
                 dto.getRemainder());
     }
 
     public ProductDto toDto(Product entity) {
+
         return new ProductDto(  entity.getName(),
                                 entity.getPrice(),
                                 entity.getGender(),
