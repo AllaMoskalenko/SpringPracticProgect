@@ -7,13 +7,13 @@ public class ProductDto {
     private int price;
     private String gender;
     private String color;
-    private String size;
+    private int size;
     private int remainder;
 
     public ProductDto() {
     }
 
-    public ProductDto(String name, int price, String gender, String color, String size, int remainder) {
+    public ProductDto(String name, int price, String gender, String color, int size, int remainder) {
         this.name = name;
         this.price = price;
         this.gender = gender;
@@ -54,11 +54,11 @@ public class ProductDto {
         this.color = color;
     }
 
-    public String getSize() {
+    public int getSize() {
         return size;
     }
 
-    public void setSize(String size) {
+    public void setSize(int size) {
         this.size = size;
     }
 

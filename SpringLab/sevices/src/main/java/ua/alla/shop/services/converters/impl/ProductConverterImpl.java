@@ -10,16 +10,16 @@ public class ProductConverterImpl implements ProductConverter {
 
     public Product toEntity(ProductDto dto) {
 
-        Product.Gender gender1 = Product.Gender.valueOf(dto.getGender());
+       /* Product.Gender gender1 = Product.Gender.valueOf(dto.getGender());
         Product.Color color1 = Product.Color.valueOf(dto.getColor());
-        Product.Size size1 = Product.Size.valueOf(dto.getSize());
+        Product.Size size1 = Product.Size.valueOf(dto.getSize());*/
 
         return new Product(null,
                 dto.getName(),
                 dto.getPrice(),
-                gender1,
-                color1,
-                size1,
+                dto.getGender(),
+                dto.getColor(),
+                dto.getSize(),
                 dto.getRemainder());
     }
 
